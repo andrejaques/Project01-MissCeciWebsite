@@ -1,0 +1,160 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: 'Henny Penny', cursive;
+    background-color: rgb(153, 153, 153);
+}
+
+.cabecalho {
+    background: rgb(86,142,193);
+    background: linear-gradient(180deg, rgb(75, 132, 185) 0%, rgb(121, 185, 224) 35%, rgb(175, 195, 231) 100%);    
+    border-bottom: solid 2px #7e3b2c;
+    height: 90px;
+    box-sizing: content-box;
+}
+
+.logo {
+    display: inline-block;
+    height: 100px;
+    padding: 12px;
+}
+
+.logo img {
+    height: 100%;
+}
+
+/* Ícone sanduíche com animação puro css */
+.container {
+        float: right;
+        height: 50px;
+        padding: 10px 20px;
+        margin: 20px 15px;
+        justify-content: center;
+        align-items: center;
+        display: flex;
+}
+
+#checkbox-menu{
+    position: absolute;
+    opacity: 0;
+}
+
+label{
+    cursor: pointer;
+    position: relative;
+    display: block;
+    height: 22px;
+    width: 22px;
+}
+  
+label span{
+    position: absolute;
+    display: block;
+    height: 5px;
+    width: 100%;
+    border-radius: 30px;
+    background: #7e3b2c;
+    transition: 0.5s ease-in-out;
+}
+  
+label span:nth-child(1){
+    top: 0;
+}
+  
+label span:nth-child(2){
+    top: 8px;
+}
+  
+label span:nth-child(3){
+    top: 16px;
+}
+  
+#checkbox-menu:checked + label span:nth-child(1){
+    transform: rotate(135deg);
+    top: 8px;
+}
+  
+#checkbox-menu:checked + label span:nth-child(2){
+    transform: rotate(45deg);
+    top: 8px;
+}
+  
+#checkbox-menu:checked + label span:nth-child(3){
+    transform: rotate(135deg);
+    top:8px;
+}
+/* fim do ícone sanduíche com animação puro css */
+
+.menu ul {
+    margin: 0;
+    padding: 0;
+}
+
+.menu {
+    display: inline-block;
+    vertical-align: top;
+    height: 80px;
+    padding: 25px;
+}
+
+.menu li {
+    display: inline-block; 
+}
+
+.cabecalho a {
+    text-decoration: none;
+}
+
+.menu a {
+    color: #eee;
+    padding: 15px;
+    font-size: 1.7em;
+}
+
+.autenticacao {
+    float: right;
+    height: 80px;
+    padding: 30px 10px;
+}
+
+.autenticacao a {    
+    color: #7e3b2c;
+}
+
+.menu a:hover,
+.menu a.selected {
+    background-color: #7e3b2c;
+    color: #000; 
+    border-radius: 20px;        
+}
+
+.botao {
+    border-radius: 30px;
+    padding: 5px 10px;
+    margin: 10px;
+}
+
+.botao:hover {
+    color: rgb(148, 8, 8);
+}
+
+@media(min-width: 900px) {
+    .container {
+        display: none;
+    }
+}
+
+@media(max-width: 899px) {
+    .menu {
+        display: none;
+    }
+}
+
+@media(max-width: 544px) {
+    .autenticacao {
+        display: none;
+    }
+}
