@@ -12,16 +12,17 @@ body {
 /* header start */
 
 .cabecalho {
+    flex-grow: 2;
+    display: flex;
+    justify-content: baseline;
     font-family: 'Henny Penny', cursive;
-    background: rgb(86,142,193);
-    background: linear-gradient(180deg, rgb(75, 132, 185) 0%, rgb(121, 185, 224) 35%, rgb(175, 195, 231) 100%);    
-    border-bottom: solid 2px #7e3b2c;
-    height: 90px;
-    box-sizing: content-box;
+    background-image: url(images/footerWood.png);
+    height: 15vh;
+    padding-left: 10px;
 }
 
     .logo {
-        display: inline-block;
+        flex-grow: 1;
         height: 100px;
         padding: 12px;
     }
@@ -36,13 +37,10 @@ body {
 
     /* Sanduich Icon Start */
     .container {
-            float: right;
-            height: 50px;
-            padding: 10px 20px;
-            margin: 20px 15px;
-            justify-content: center;
-            align-items: center;
             display: flex;
+            align-items: center;
+            justify-content: center;
+            padding-right: 30px;
     }
 
         #checkbox-menu{
@@ -99,19 +97,19 @@ body {
 
     
     .menu {
-        display: inline-block;
-        vertical-align: top;
-        height: 80px;
-        padding: 25px;
+        flex-grow: 4;
+        display: flex;
+        align-items: center;
     }
 
         .menu ul {
+            display: flex;
             margin: 0;
             padding: 0;
         }
         
             .menu li {
-                display: inline-block; 
+                list-style: none;
             }
 
                 .menu a {
@@ -128,8 +126,8 @@ body {
                 }
 
     .autenticacao {
-        float: right;
-        height: 80px;
+        flex-grow: 1;
+        display: flex;
         padding: 30px 10px;
     }
 
@@ -144,22 +142,22 @@ body {
         }
 
         .botao:hover {
-            color: rgb(148, 8, 8);
+            color: rgb(223, 9, 9);
         }
 
-@media(min-width: 993px) {
+@media(min-width: 921px) {
     .container {
         display: none;
     }
 }
 
-@media(max-width: 992px) {
+@media(max-width: 920px) {
     .menu {
         display: none;
     }
 }
 
-@media(max-width: 544px) {
+@media(max-width: 530px) {
     .autenticacao {
         display: none;
     }
@@ -170,6 +168,8 @@ body {
 /* Main Body Starts */
 
 .mainBody {
+    height: 78vh;
+    flex-grow: 10;
     display: flex;
 }
 
@@ -181,9 +181,9 @@ body {
         align-items: center;
         align-content: space-between;
         font-family: 'Fredericka the Great', cursive;
-        height: 675px;
         background-image: url(images/BodyBoardP.jpg);
         background-size: cover;
+        border: solid 2px #bb773f;
     }
 
         .chalkBoard boardAnnotationH1 {
@@ -201,11 +201,23 @@ body {
         .chalkBoard boardAnnotation03 {
             font-size: 30px;
         }
+    
+        .mainBRight {
+            width: 25px;
+            background-image: url(images/footerWood.png);
+        }
+
+        .mainBLeft {
+            width: 25px;
+            background-image: url(images/footerWood.png);
+        }
 
 footer {
+    flex-grow: 1;
     display: flex;
-    height: 25px;
+    height: 7vh;
     background-image: url(images/footerWood.png);
 }
 
-/* falta deixar o cabeçalho em flexbox e por as laterias do quadro */
+/* Organizar o @midia */
+/* falta colocar o botao sanduiche para funcionar */
