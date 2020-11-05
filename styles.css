@@ -17,7 +17,7 @@ body {
     justify-content: baseline;
     font-family: 'Henny Penny', cursive;
     background-image: url(images/footerWood.png);
-    height: 15vh;
+    height: 10vh;
     padding-left: 10px;
 }
 
@@ -168,7 +168,7 @@ body {
 /* Main Body Starts */
 
 .mainBody {
-    height: 78vh;
+    height: 85vh;
     flex-grow: 10;
     display: flex;
 }
@@ -215,7 +215,7 @@ body {
 footer {
     flex-grow: 1;
     display: flex;
-    height: 7vh;
+    height: 5vh;
     background-image: url(images/footerWood.png);
 }
 
